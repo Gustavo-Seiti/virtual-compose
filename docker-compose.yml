@@ -1,0 +1,40 @@
+services:
+  mongodb:
+    image: devseiti/mongo-4
+    command: [--auth]
+    container_name: mongodb
+    volumes: 
+    - banco:/data
+    networks:
+      - rede
+    ports:
+      - 27018:27017
+
+  frontend:
+    image: cadudtechta/virtual:28
+    command: >
+      sh -c "npm install &&
+             npm run startf"
+    networks:
+      - rede
+    ports:
+      - 8443:8443
+      - 25700:25700
+  
+  backend:
+    image: cadudtechta/virtual:28
+    command: >
+      sh -c "npm install &&
+             npm run startb"
+    networks:
+      - rede
+    ports:
+      - 50000-50400-50000:50400
+
+volumes:
+  banco:
+    external: true
+
+networks:
+  rede:
+    driver: bridge
