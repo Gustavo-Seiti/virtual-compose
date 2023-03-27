@@ -1,6 +1,7 @@
 services:
   mongodb:
     image: devseiti/mongo-4
+    command: [--auth]
     container_name: mongodb
     volumes: 
     - bd:/data
