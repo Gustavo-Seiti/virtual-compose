@@ -29,7 +29,7 @@ services:
     networks:
       - rede
     ports:
-      - 50000-50400-50000:50400
+      - 50000-50400:50000-50400
 
 volumes:
   bd:
