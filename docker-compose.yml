@@ -22,7 +22,7 @@ services:
       - 25700:25700
   
   backend:
-    image: cadudtechta/virtual:27-03
+    image: cadudtechta/virtual:26-04
     command: >
       sh -c "npm install &&
              npm run startb"
