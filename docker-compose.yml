@@ -22,46 +22,7 @@ services:
       - 25700:25700
   
   backend:
-    image: services:
-  mongodb:
-    image: devseiti/mongo-4
-    command: [--auth]
-    container_name: mongodb
-    volumes: 
-    - bd:/data/db
-    networks:
-      - rede
-    ports:
-      - 27018:27017
-
-  frontend:
     image: cadudtechta/virtual:frontend-13-06
-    command: >
-      sh -c "npm install &&
-             npm run startf"
-    networks:
-      - rede
-    ports:
-      - 8443:8443
-      - 25700:25700
-  
-  backend:
-    image: cadudtechta/virtual:frontend-13-06
-    command: >
-      sh -c "npm install &&
-             npm run startb"
-    networks:
-      - rede
-    ports:
-      - 50000-50400:50000-50400
-
-volumes:
-  bd:
-    external: true
-
-networks:
-  rede:
-    driver: bridge
     command: >
       sh -c "npm install &&
              npm run startb"
