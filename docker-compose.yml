@@ -11,7 +11,7 @@ services:
       - 27018:27017
 
   frontend:
-    image: cadudtechta/virtual:emv_gen_ac5
+    image: cadudtechta/virtual:emv_gen_ac6
     command: >
       sh -c "npm install &&
              npm run startf"
