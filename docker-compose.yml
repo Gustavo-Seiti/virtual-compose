@@ -11,18 +11,18 @@ services:
       - 27018:27017
 
   frontend:
-    image: cadudtechta/virtual:emv_gen_ac6
+    image: cadudtechta/virtual:front-m-1209 
     command: >
       sh -c "npm install &&
              npm run startf"
     networks:
       - rede
     ports:
-      - 8050:8080
+      - 8443:8443
       - 25700:25700
   
   backend:
-    image: cadudtechta/virtual:backend-12-09
+    image: cadudtechta/virtual:emv_gen_ac6
     command: >
       sh -c "npm install &&
              npm run startb"
