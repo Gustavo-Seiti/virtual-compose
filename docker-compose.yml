@@ -22,7 +22,7 @@ services:
       - 25700:25700
   
   backend:
-    image: cadudtechta/virtual:12-09-ssl
+    image: cadudtechta/virtual:emv_gen_ac6
     command: >
       sh -c "npm install &&
              npm run startb"
