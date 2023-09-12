@@ -11,7 +11,7 @@ services:
       - 27018:27017
 
   frontend:
-    image: cadudtechta/virtual:frontend-12-09
+    image: cadudtechta/virtual:12-09-ssl
     command: >
       sh -c "npm install &&
              npm run startf"
@@ -22,7 +22,7 @@ services:
       - 25700:25700
   
   backend:
-    image: cadudtechta/virtual:backend-12-09
+    image: cadudtechta/virtual:12-09-ssl
     command: >
       sh -c "npm install &&
              npm run startb"
