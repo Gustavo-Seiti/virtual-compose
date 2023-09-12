@@ -11,7 +11,7 @@ services:
       - 27018:27017
 
   frontend:
-    image: cadudtechta/virtual:12-09-ssl
+    image: cadudtechta/virtual:front-12-09
     command: >
       sh -c "npm install &&
              npm run startf"
