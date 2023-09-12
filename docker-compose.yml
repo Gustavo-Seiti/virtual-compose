@@ -18,7 +18,7 @@ services:
     networks:
       - rede
     ports:
-      - 8443:8443
+      - 8050:8050
       - 25700:25700
   
   backend:
